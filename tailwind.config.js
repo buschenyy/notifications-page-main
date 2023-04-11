@@ -1,6 +1,7 @@
 module.exports = {
   content: ["index.html", "./src/**/*.{js,jsx,ts,tsx,vue,html}"],
   theme: {
+    container: { center: true },
     colors: {
       white: "hsl(0, 0%, 100%)",
       veryLightGrayishBlue: "hsl(210, 60%, 98%)",
