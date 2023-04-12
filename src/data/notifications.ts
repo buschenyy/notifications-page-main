@@ -27,7 +27,7 @@ export const notifications: NotificationTemplateProps[] = [
     type: "join",
     from: "Jacob Thompson",
     image: "avatar-jacob-thompson.webp",
-    group: "Chess Club",
+    group: "Fight Club",
     time: "1 day ago",
   },
   {
@@ -35,7 +35,7 @@ export const notifications: NotificationTemplateProps[] = [
     from: "Rizky Hasanuddin",
     image: "avatar-rizky-hasanuddin.webp",
     message:
-      "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
+      "Hello, thanks for setting up the Fight Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
     time: "5 days ago",
   },
   {
@@ -56,7 +56,14 @@ export const notifications: NotificationTemplateProps[] = [
     type: "leave",
     from: "Anna Kim",
     image: "avatar-anna-kim.webp",
-    group: "Chess Club",
+    group: "Fight Club",
     time: "2 weeks ago",
+  },
+  {
+    type: "join",
+    from: "Tyler Durden",
+    image: "avatar-tyler-durden.webp",
+    group: "Fight Club",
+    time: "3 weeks ago",
   },
 ];

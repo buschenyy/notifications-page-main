@@ -10,6 +10,8 @@ module.exports = {
       grayishBlue: "hsl(219, 14%, 63%)",
       darkGrayishBlue: "hsl(219, 12%, 42%)",
       veryDarkBlue: "hsl(224, 21%, 14%)",
+      redDot: "#FF5350",
+      darkRedBorder: "#D0534F",
     },
     fontFamily: {
       sans: ["Plus Jakarta Sans", "sans-serif"],

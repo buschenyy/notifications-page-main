@@ -80,8 +80,9 @@ export const Notification = ({
             </span>
           )}
           {group && (
-            <span className="font-extrabold text-[#083378]">{group}</span>
+            <span className="font-extrabold text-[#083378]">{group}&ensp;</span>
           )}
+          <span className="inline-block h-2 w-2 rounded-full border-darkRedBorder bg-redDot"></span>
         </div>
         <span className="text-grayishBlue">{time}</span>
         {message && (

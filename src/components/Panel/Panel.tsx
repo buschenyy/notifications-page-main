@@ -15,7 +15,7 @@ export const Panel = () => {
       </button>
       <ul className="col-span-2 flex flex-col gap-y-10 py-10 pl-4 pr-3">
         {notifications.map((e) => (
-          <Notification {...e} />
+          <Notification key={e.from} {...e} />
         ))}
       </ul>
     </div>
