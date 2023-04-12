@@ -12,11 +12,11 @@ export const Panel = () => {
       <button className="cursor-pointer self-center justify-self-end text-sm font-medium text-darkGrayishBlue">
         Mark all as read
       </button>
-      <div className="col-span-2 pt-10 flex-col flex gap-y-10">
+      <ul className="col-span-2 pt-10 flex-col flex gap-y-10">
         <Notification />
         <Notification />
         <Notification />
-      </div>
+      </ul>
     </div>
   );
 };
