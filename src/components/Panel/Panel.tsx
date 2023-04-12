@@ -1,4 +1,5 @@
 import { Notification } from "../Notification/Notification";
+import { notifications } from '../../data/notifications';
 
 export const Panel = () => {
   return (
@@ -12,10 +13,11 @@ export const Panel = () => {
       <button className="cursor-pointer self-center justify-self-end text-sm font-medium text-darkGrayishBlue">
         Mark all as read
       </button>
-      <ul className="col-span-2 pt-10 flex-col flex gap-y-10">
-        <Notification />
-        <Notification />
-        <Notification />
+      <ul className="col-span-2 flex flex-col gap-y-10 py-10 pl-4 pr-3">
+        {notifications.map((e) => (
+          console.log({...e}),
+          <Notification {...e}/>
+        ))}
       </ul>
     </div>
   );
