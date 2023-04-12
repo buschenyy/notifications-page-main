@@ -60,9 +60,14 @@ export const Notification = ({
     <li
       className={`grid gap-x-3 text-sm ${
         additionalImg ? `grid-cols-[40px_1fr_40px]` : `grid-cols-[40px_1fr]`
-      }`} {...props}
+      }`}
+      {...props}
     >
-      <img src={image} alt={"from"} className="h-10 w-10 rounded-full" />
+      <img
+        src={"images/" + image}
+        alt={from}
+        className="h-10 w-10 rounded-full"
+      />
       <div>
         <div>
           <span className="font-extrabold">{from}&ensp;</span>
@@ -86,7 +91,7 @@ export const Notification = ({
         )}
       </div>
       {additionalImg && (
-        <div className="h-10 w-10 rounded-md bg-darkGrayishBlue"></div>
+        <img src={"images/" + additionalImg} className="h-10 w-10 rounded-md" />
       )}
     </li>
   );
