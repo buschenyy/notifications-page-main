@@ -1,3 +1,5 @@
+import { DetailedHTMLProps } from "react";
+
 const notificationsMsg = {
   reaction: "reacted to your recent post",
   follow: "followed you",
@@ -54,6 +56,7 @@ export const Notification = ({
   message,
   group,
   additionalImg,
+  unreaded,
   ...props
 }: NotificationTemplateProps) => {
   return (
@@ -82,7 +85,9 @@ export const Notification = ({
           {group && (
             <span className="font-extrabold text-[#083378]">{group}&ensp;</span>
           )}
-          <span className="inline-block h-2 w-2 rounded-full border-darkRedBorder bg-redDot"></span>
+          {unreaded.find((e) => e === from) && (
+            <span className="inline-block h-2 w-2 rounded-full border-darkRedBorder bg-redDot"></span>
+          )}
         </div>
         <span className="text-grayishBlue">{time}</span>
         {message && (
@@ -102,7 +107,11 @@ interface NotificationProps {
   nData: NotificationTemplateProps;
 }
 
-interface NotificationTemplateProps {
+interface NotificationTemplateProps
+  extends DetailedHTMLProps<
+    React.LiHTMLAttributes<HTMLLIElement>,
+    HTMLLIElement
+  > {
   type: "reaction" | "follow" | "join" | "leave" | "message" | "comment";
   from: string;
   image?: string;
@@ -111,4 +120,5 @@ interface NotificationTemplateProps {
   message?: string;
   post?: string;
   additionalImg?: string;
+  unreaded: string[];
 }
