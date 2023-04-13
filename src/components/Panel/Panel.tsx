@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export const Panel = () => {
   const [unreadNotice, setUnreadNotice] = useState<string[]>(
-    notifications.map((e) => e.from)
+    notifications.map((e) => e.from).filter((_, i) => i < 3)
   );
 
   const readNoticeHandler = (id: string) => {
